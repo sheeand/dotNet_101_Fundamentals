@@ -1,0 +1,19 @@
+﻿NOUNS: username, vehicle type(car, boat, motorcycle, or plane),
+age, insurance cost
+VERBS: get name, get type of vehicle, get age, show cost
+
+Business Problem: 
+Komodo insurance wants a simple program that asks 
+users their name and what
+type of vehicle they have to be insured. 
+
+Vehicles include car, boat, motorcycle, or plane. 
+
+When the user enters a vehicle name, the console will
+respond with a fixed amount for insurance for one month.  
+For simplicity, we’ll handle three age ranges.
+
+Age       Car   Boat   Motorcycle   Plane
+18-27     150   200    200          1000
+27-65     50    100    100          500
+65+       100   150    250          1000
