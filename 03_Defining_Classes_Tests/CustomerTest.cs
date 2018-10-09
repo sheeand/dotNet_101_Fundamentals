@@ -2,66 +2,64 @@
 using _03_Defining_Classes_1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-//TODO: Test Cleanup example
-
 namespace _03_Defining_Classes_Tests
 {
     [TestClass]
-    public class EmployeeTest
+    public class CustomerTest
     {
         //-- Field
-        private Employee _employee;
+        private Customer _customer;
 
         [TestInitialize]
         public void Arrange()
         {
             //-- Arrange
-            _employee = new Employee();
-            _employee.EmployeeID = 1;
-            _employee.LastName = "Pascascio";
-            _employee.NumberOfHoursOnClock = 4000;
-            _employee.Age = 27;
+            _customer = new Customer();
+            _customer.CustomerID = 1;
+            _customer.LastName = "Pascascio";
+            _customer.NumberOfItemsPurchased = 4000;
+            _customer.Age = 27;
         }
 
         [TestMethod]
-        public void Employee_SetLastName_IsProperString()
+        public void Customer_SetLastName_IsString()
         {
             //-- Act
             var expected = "Pascascio";
-            var actual = _employee.LastName;
+            var actual = _customer.LastName;
 
             //-- Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Employee_EmployeeID_IsInt()
+        public void Customer_CustomerID_IsInt()
         {
             //-- Act
             var expected = 1;
-            var actual = _employee.EmployeeID;
+            var actual = _customer.CustomerID;
 
             //-- Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Employee_HoursOnClock_IsCorrectInt()
+        public void Customer_NumberOfItemsPurchased_IsCorrectInt()
         {
             //-- Act
             var expected = 4000;
-            var actual = _employee.NumberOfHoursOnClock;
+            var actual = _customer.NumberOfItemsPurchased;
 
             //-- Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void Employee_SetAge_IsCorrectInt()
+        public void Customer_SetAge_IsCorrectInt()
         {
             //-- Act
             var expected = 27;
-            var actual = _employee.Age;
+            var actual = _customer.Age;
 
             //-- Assert
             Assert.AreEqual(expected, actual);

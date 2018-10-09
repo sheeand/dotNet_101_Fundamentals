@@ -8,7 +8,7 @@ namespace _02_Reference_Types_Unit_Tests
     public class CustomerTests
     {
         [TestMethod]
-        public void Customer_SetFirstNameAsString()
+        public void Customer_SetFirstName_ShouldBeString()
         {
             //-- Arrange
             var customer = new Customer();
@@ -39,6 +39,7 @@ namespace _02_Reference_Types_Unit_Tests
 
         }
 
+        //TODO: Test for HW.
 
 
     }

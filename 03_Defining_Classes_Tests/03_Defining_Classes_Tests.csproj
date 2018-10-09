@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F0595035-261B-4EA5-AD6C-377F5D090AA5}</ProjectGuid>
+    <ProjectGuid>{99443449-54D8-430D-8319-55868E67067B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_03_Defining_Classes_Tests</RootNamespace>
@@ -48,18 +48,15 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeTest.cs" />
+    <Compile Include="CustomerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TextFile1.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\03_Defining_Classes_1\03_Defining_Classes_1.csproj">
-      <Project>{832c8c86-4c6d-4f69-9961-255fcdc2a93d}</Project>
+      <Project>{832C8C86-4C6D-4F69-9961-255FCDC2A93D}</Project>
       <Name>03_Defining_Classes_1</Name>
     </ProjectReference>
   </ItemGroup>
