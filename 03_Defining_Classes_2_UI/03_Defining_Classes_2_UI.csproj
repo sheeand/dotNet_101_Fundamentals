@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B21D8C44-6656-4CFD-A64F-DC4D4A89E69B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_03_Definng_Classes_2_UI</RootNamespace>
-    <AssemblyName>_03_Definng_Classes_2_UI</AssemblyName>
+    <RootNamespace>_03_Defining_Classes_2_UI</RootNamespace>
+    <AssemblyName>03_Defining_Classes_2_UI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\03_Defining_Classes_2\03_Defining_Classes_2.csproj">
+      <Project>{e48a89bd-b1b9-4793-8a3e-cf10c9fd53a9}</Project>
+      <Name>03_Defining_Classes_2</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
