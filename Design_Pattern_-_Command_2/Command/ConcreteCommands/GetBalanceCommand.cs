@@ -9,16 +9,27 @@ namespace Design_Pattern___Command_2.Command.ConcreteCommands
 {
     class GetBalanceCommand : ICommand
     {
-        private Account _account;
+        public bool ValidTransaction { get; set; }
+        public int TransactionID { get; set; }
+        public decimal TransactionValue { get; set; }
+        private IAccount _account;
 
-        public GetBalanceCommand(Account account)
+        public GetBalanceCommand(IAccount account, int id)
         {
+            TransactionID = id;
             _account = account;
         }
 
-        public void Execute()
+        public bool Execute()
         {
-            _account.GetBalance();
+            if (_account.GetBalance())
+            {
+                ValidTransaction = true;
+                return true;
+            }
+            else return false;
         }
+        public override string ToString() => $"{TransactionID}. Balance check. Valid: {ValidTransaction}";
+
     }
 }

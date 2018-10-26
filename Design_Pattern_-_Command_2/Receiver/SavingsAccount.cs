@@ -6,29 +6,47 @@ using System.Threading.Tasks;
 
 namespace Design_Pattern___Command_2.Receiver
 {
-    class Account
+    //-- Class that implements the IAccount interface and will act as the Receiver
+
+    class SavingsAccount : IAccount
     {
+        public decimal Balance { get; set; }
 
-        decimal balance = 40m;
-
-        public void GetBalance()
+        public bool GetBalance()
         {
-            Console.WriteLine($"The balance is ${balance}");
+            Console.WriteLine($"The current savings account balance is ${Balance}");
+            return true;
         }
 
-        public void Deposit()
+        public bool Deposit(decimal value)
         {
-            Console.WriteLine("Depositing");
+            var oldBalance = Balance;
+            Balance += value;
+
+            if (oldBalance != Balance) return true;
+            else return false;
         }
 
-        public void Withdraw()
+        public bool Withdraw(decimal value)
         {
-            Console.WriteLine("Withdrawing");
+            var oldBal = Balance;
+
+            if ((Balance - value) >= 0)
+            {
+                Balance -= value;
+                Console.WriteLine($"New account balance is: ${Balance}.");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Withdrawal could not go through.");
+                return false;
+            }
         }
 
-        internal void Deposit(decimal amount)
-        {
-            throw new NotImplementedException();
-        }
+        //bool IAccount.Deposit(decimal value)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

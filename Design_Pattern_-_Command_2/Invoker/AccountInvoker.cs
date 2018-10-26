@@ -1,4 +1,5 @@
 ﻿using Design_Pattern___Command_2.Command;
+using Design_Pattern___Command_2.Command.ConcreteCommands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,42 +15,36 @@ namespace Design_Pattern___Command_2.Invoker
         // The Receiver determines "how" the command is executed
 
         //-- Field that allows us to pass in a command
-        private ICommand _getBalance;
-        private ICommand _deposit;
-        private ICommand _withdraw;
+        public ICommand GetBalanceCommand;
+        public ICommand DepositCommand;
+        public ICommand WithdrawCommand;
+        public List<ICommand> TransactionHistory;
 
-        //-- There are two Constructors
-        //-- The first Constructor is used when the Invoker is originally created on a brand new Account
+        //private List<ICommand> _transactionHistory;
+
         public AccountInvoker(ICommand getBalance, ICommand deposit, ICommand withdraw)
         {
-            _getBalance = getBalance;
-            _deposit = deposit;
-            _withdraw = withdraw;
-        }
-
-        //-- The second Constructor is used anytime after the initial creation and allows the Concrete Commands to be updated
-        //TODO: Create public methods that allow these to be updated in existing Invoker
-        public AccountInvoker(ICommand getBalance, ICommand deposit, ICommand withdraw, List<ICommand> transactionList)
-        {
-            _getBalance = getBalance;
-            _deposit = deposit;
-            _withdraw = withdraw;
-            _
+            TransactionHistory = new List<ICommand>();
+            GetBalanceCommand = getBalance;
+            DepositCommand = deposit;
+            WithdrawCommand = withdraw;
         }
 
         public void GetBalance()
         {
-            _getBalance.Execute();
+            GetBalanceCommand.Execute();
         }
 
-        public void Deposit(decimal amount)
+        public void Deposit()
         {
-            _deposit.Execute(amount);
+            TransactionHistory.Add(DepositCommand);
+            DepositCommand.Execute();
         }
 
-        public void Withdraw(decimal amount)
+        public void Withdraw()
         {
-            _withdraw.Execute(amount);
+            TransactionHistory.Add(DepositCommand);
+            WithdrawCommand.Execute();
         }
     }
 }

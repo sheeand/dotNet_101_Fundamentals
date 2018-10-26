@@ -9,28 +9,26 @@ namespace Design_Pattern___Command_2.Command.ConcreteCommands
 {
     class WithdrawCommand : ICommand
     {
-        private Account account;
+        public bool ValidTransaction { get; set; }
+        public int TransactionID { get; set; }
+        public decimal TransactionValue { get; set; }
+        private IAccount _account;
 
-        public WithdrawCommand(Account account)
+        public WithdrawCommand(IAccount account, decimal value, int id)
         {
-            this.account = account;
+            TransactionID = id;
+            _account = account;
+            TransactionValue = value;
         }
 
-        public void Execute()
+        public bool Execute()
         {
-            account.Withdraw();
+            if (_account.Withdraw(TransactionValue))
+            {
+                ValidTransaction = true;
+                return true;
+            }
+            else return false;
         }
-
-        //private Account _account;
-
-        //public WithdrawCommand(Account account)
-        //{
-        //    _account = account;
-        //}
-
-        //public void Execute()
-        //{
-        //_account.Withdraw();
-        //}
     }
 }

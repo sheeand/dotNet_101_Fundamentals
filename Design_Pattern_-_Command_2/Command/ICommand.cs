@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Design_Pattern___Command_2.Command
 {
-    interface ICommand
+    public interface ICommand
     {
-        void Execute();
-
-        decimal Execute(decimal amount); // overload
+        bool ValidTransaction { get; set; }
+        int TransactionID { get; set; }
+        decimal TransactionValue { get; set; }
+        bool Execute();
     }
 }

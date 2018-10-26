@@ -47,9 +47,11 @@
     <Compile Include="Command\ConcreteCommands\WithdrawCommand.cs" />
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Invoker\AccountInvoker.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Receiver\Account.cs" />
+    <Compile Include="Receiver\SavingsAccount.cs" />
+    <Compile Include="Receiver\IAccount.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

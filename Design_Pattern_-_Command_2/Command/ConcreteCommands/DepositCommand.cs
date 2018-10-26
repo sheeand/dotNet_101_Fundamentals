@@ -9,20 +9,34 @@ namespace Design_Pattern___Command_2.Command.ConcreteCommands
 {
     class DepositCommand : ICommand
     {
-        private Account _account;
+        public bool ValidTransaction { get; set; }
+        public int TransactionID { get; set; }
+        public decimal TransactionValue { get; set; }
+        private IAccount _account;
+        private SavingsAccount account;
 
-        public DepositCommand(Account account)
+        public DepositCommand(IAccount account, decimal value, int id)
         {
+            TransactionID = id;
             _account = account;
-        }
-        public void Execute()
-        {
-            _account.Deposit();
+            TransactionValue = value;
         }
 
-        public void Execute(decimal amount)
+        public DepositCommand(SavingsAccount account)
         {
-            _account.Deposit(amount);
+            this.account = account;
         }
+
+        public bool Execute()
+        {
+            if (_account.Deposit(TransactionValue))
+            {
+                ValidTransaction = true;
+                return true;
+            }
+            else return false;
+        }
+
+        public override string ToString() => $"{TransactionID}. Deposited ${TransactionValue}. Valid: {ValidTransaction}";
     }
 }
