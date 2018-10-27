@@ -78,7 +78,7 @@ namespace Design_Pattern___Command_2
         private IAccount _account;
 
         //-- Declaring the Commands that will be used in the Invoker
-        private ICommand _balance, _deposit, _withdraw;
+        private ICommand _balance, _deposit, _withdraw, _revert;
 
         //-- Declaring the Invoker
         private AccountInvoker _invoker;
@@ -104,9 +104,9 @@ namespace Design_Pattern___Command_2
             _balance = new GetBalanceCommand(_account, _transactionCount);
             _deposit = new DepositCommand(_account, 0m, _transactionCount);
             _withdraw = new WithdrawCommand(_account, 0m, _transactionCount);
-            //_revert = new RevertTransaction(_account, 0m, _transactionCount, 0);
+            _revert = new RevertTransaction(_account, 0m, _transactionCount, 0);
 
-            _invoker = new AccountInvoker(_balance, _deposit, _withdraw);
+            _invoker = new AccountInvoker(_balance, _deposit, _withdraw, _revert);
         }
 
 

@@ -19,15 +19,17 @@ namespace Design_Pattern___Command_2.Invoker
         public ICommand DepositCommand;
         public ICommand WithdrawCommand;
         public List<ICommand> TransactionHistory;
+        public ICommand RevertCommand;
 
         //private List<ICommand> _transactionHistory;
 
-        public AccountInvoker(ICommand getBalance, ICommand deposit, ICommand withdraw)
+        public AccountInvoker(ICommand getBalance, ICommand deposit, ICommand withdraw, ICommand revert)
         {
             TransactionHistory = new List<ICommand>();
             GetBalanceCommand = getBalance;
             DepositCommand = deposit;
             WithdrawCommand = withdraw;
+            RevertCommand = revert;
         }
 
         public void GetBalance()
@@ -45,6 +47,11 @@ namespace Design_Pattern___Command_2.Invoker
         {
             TransactionHistory.Add(DepositCommand);
             WithdrawCommand.Execute();
+        }
+        public void Revert(int id)
+        {
+            TransactionHistory.Add(RevertCommand);
+            if (RevertCommand.Execute()) TransactionHistory[id - 1].ValidTransaction = false;
         }
     }
 }

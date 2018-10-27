@@ -44,6 +44,13 @@ namespace Design_Pattern___Command_2.Receiver
             }
         }
 
+        public bool Revert(decimal revertValue)
+        {
+            Balance += revertValue;
+            Console.WriteLine($"Current account balance is ${Balance}.");
+            return true;
+        }
+
         //bool IAccount.Deposit(decimal value)
         //{
         //    throw new NotImplementedException();

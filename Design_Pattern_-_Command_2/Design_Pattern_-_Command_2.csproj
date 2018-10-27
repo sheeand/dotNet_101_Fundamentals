@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Command\ConcreteCommands\DepositCommand.cs" />
     <Compile Include="Command\ConcreteCommands\GetBalanceCommand.cs" />
+    <Compile Include="Command\ConcreteCommands\RevertTransaction.cs" />
     <Compile Include="Command\ConcreteCommands\WithdrawCommand.cs" />
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Invoker\AccountInvoker.cs" />

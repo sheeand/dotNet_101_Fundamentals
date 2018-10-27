@@ -15,5 +15,6 @@ namespace Design_Pattern___Command_2.Receiver
         bool GetBalance();
         bool Deposit(decimal value);
         bool Withdraw(decimal value);
+        bool Revert(decimal transactionValue);
     }
 }
