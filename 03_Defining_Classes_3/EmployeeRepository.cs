@@ -8,13 +8,16 @@ namespace _03_Defining_Classes_3
 {
     public class EmployeeRepository
     {
+        // Field
         private List<Employee> _employeeRepo;
 
+        // Constructor
         public EmployeeRepository()
         {
             _employeeRepo = new List<Employee>();
         }
 
+        // Methods
         public void AddCustomerToList(Employee employee)
         {
             _employeeRepo.Add(employee);

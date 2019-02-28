@@ -15,10 +15,14 @@ namespace _03_Defining_Classes_2
             _weatherList = new List<Weather>();
         }
 
-        public void AddWeatherItemToList()
+        public void AddWeatherItemToList(Weather weather)
         {
-
+            _weatherList.Add(weather);
         }
 
+        public List<Weather> GetWeatherList()
+        {
+            return _weatherList;
+        }
     }
 }
