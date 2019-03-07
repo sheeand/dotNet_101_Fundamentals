@@ -16,30 +16,5 @@ namespace _03_Defining_Classes_4_ClaimHandler
         {
             _claimRepo.AddClaimToList(claim);
         }
-
-        public bool ValidateEntryDate(Claim claim)
-        {
-            if (claim.EntryDate > DateTime.Now.AddDays(-30))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public string ValidateAmount(Claim claim)
-        {
-            string message = "";
-            if (claim.ClaimAmount > 10000.0m)
-            {
-                return message = "Please call your agent, now.";
-            }
-            else
-            {
-                return message = "Your claim is being processed.";
-            }
-        }
     }
 }

@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_2_UI", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_3", "03_Defining_Classes_3\03_Defining_Classes_3.csproj", "{F07DD57A-F921-43C3-B4A6-B8AF1289790C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_Tests", "03_Defining_Classes_Tests\03_Defining_Classes_Tests.csproj", "{99443449-54D8-430D-8319-55868E67067B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_1_Tests", "03_Defining_Classes_Tests\03_Defining_Classes_1_Tests.csproj", "{99443449-54D8-430D-8319-55868E67067B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_2_Unit_Tests", "03_Defining_Classes_2_Unit_Tests\03_Defining_Classes_2_Unit_Tests.csproj", "{5CA961DC-A288-4A43-A7BD-07B59BCB6227}"
 EndProject
@@ -30,8 +30,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_4", "03_Defining_Classes_4\03_Defining_Classes_4.csproj", "{72604585-AE11-4B43-9AD4-65428001B37F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_4_Repository", "03_Defining_Classes_4_Repository\03_Defining_Classes_4_Repository.csproj", "{22000B5C-FC04-4540-87CE-B87A16CE08AE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_4_ClaimHandler", "03_Defining_Classes_4_ClaimHandler\03_Defining_Classes_4_ClaimHandler.csproj", "{A377801A-B5F4-43C0-A731-7C08A902A5E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Defining_Classes_4_UnitTests", "03_Defining_Classes_4_UnitTests\03_Defining_Classes_4_UnitTests.csproj", "{82A26385-2518-428F-912D-4283268D3F84}"
 EndProject
@@ -125,10 +123,6 @@ Global
 		{22000B5C-FC04-4540-87CE-B87A16CE08AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22000B5C-FC04-4540-87CE-B87A16CE08AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22000B5C-FC04-4540-87CE-B87A16CE08AE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A377801A-B5F4-43C0-A731-7C08A902A5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A377801A-B5F4-43C0-A731-7C08A902A5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A377801A-B5F4-43C0-A731-7C08A902A5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A377801A-B5F4-43C0-A731-7C08A902A5E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{82A26385-2518-428F-912D-4283268D3F84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82A26385-2518-428F-912D-4283268D3F84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82A26385-2518-428F-912D-4283268D3F84}.Release|Any CPU.ActiveCfg = Release|Any CPU

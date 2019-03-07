@@ -49,5 +49,8 @@
       <Name>03_Defining_Classes_4</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
